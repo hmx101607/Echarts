@@ -21,7 +21,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [EDHomeViewController create];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[EDHomeViewController create]];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
     [self addFlexTapGestureIfNeed];

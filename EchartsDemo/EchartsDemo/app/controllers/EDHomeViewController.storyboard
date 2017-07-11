@@ -20,7 +20,29 @@
                     <view key="view" contentMode="scaleToFill" id="cOb-So-n25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ap-hY-3TZ">
+                                <rect key="frame" x="164" y="218.5" width="46" height="30"/>
+                                <state key="normal" title="折线图"/>
+                                <connections>
+                                    <action selector="polylineAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="LnV-4s-3Qt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-FL-hA5">
+                                <rect key="frame" x="164" y="348.5" width="46" height="30"/>
+                                <state key="normal" title="柱状图"/>
+                                <connections>
+                                    <action selector="columnarAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="MGO-RY-czl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Ap-hY-3TZ" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="BoC-ZE-tp6"/>
+                            <constraint firstItem="FBx-FL-hA5" firstAttribute="top" secondItem="5Ap-hY-3TZ" secondAttribute="bottom" constant="100" id="ITf-JB-beR"/>
+                            <constraint firstItem="5Ap-hY-3TZ" firstAttribute="centerY" secondItem="cOb-So-n25" secondAttribute="centerY" constant="-100" id="jKs-EQ-iEY"/>
+                            <constraint firstItem="FBx-FL-hA5" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="wx6-Yu-4cZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUT-3g-xaL" userLabel="First Responder" sceneMemberID="firstResponder"/>

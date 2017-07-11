@@ -34,6 +34,10 @@
 		93324D9C1F1385E8005DDC26 /* PortraitNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93324D8B1F1385E8005DDC26 /* PortraitNavigationController.m */; };
 		93324DA01F13866C005DDC26 /* EDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93324D9E1F13866C005DDC26 /* EDHomeViewController.m */; };
 		93324DA11F13866C005DDC26 /* EDHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93324D9F1F13866C005DDC26 /* EDHomeViewController.storyboard */; };
+		9388688C1F146BAE009158B5 /* EDPolylineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388688A1F146BAE009158B5 /* EDPolylineViewController.m */; };
+		9388688D1F146BAE009158B5 /* EDPolylineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9388688B1F146BAE009158B5 /* EDPolylineViewController.storyboard */; };
+		938868911F146DC0009158B5 /* EDColumnarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388688F1F146DC0009158B5 /* EDColumnarViewController.m */; };
+		938868921F146DC0009158B5 /* EDColumnarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938868901F146DC0009158B5 /* EDColumnarViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,12 @@
 		93324D9D1F13866C005DDC26 /* EDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDHomeViewController.h; sourceTree = "<group>"; };
 		93324D9E1F13866C005DDC26 /* EDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDHomeViewController.m; sourceTree = "<group>"; };
 		93324D9F1F13866C005DDC26 /* EDHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EDHomeViewController.storyboard; sourceTree = "<group>"; };
+		938868891F146BAE009158B5 /* EDPolylineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDPolylineViewController.h; sourceTree = "<group>"; };
+		9388688A1F146BAE009158B5 /* EDPolylineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDPolylineViewController.m; sourceTree = "<group>"; };
+		9388688B1F146BAE009158B5 /* EDPolylineViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EDPolylineViewController.storyboard; sourceTree = "<group>"; };
+		9388688E1F146DC0009158B5 /* EDColumnarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDColumnarViewController.h; sourceTree = "<group>"; };
+		9388688F1F146DC0009158B5 /* EDColumnarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDColumnarViewController.m; sourceTree = "<group>"; };
+		938868901F146DC0009158B5 /* EDColumnarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EDColumnarViewController.storyboard; sourceTree = "<group>"; };
 		A24A33962186BB33AE7BA686 /* Pods-EchartsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchartsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EchartsDemo/Pods-EchartsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A8049166168FC6DE2B3221F2 /* Pods-EchartsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchartsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchartsDemo/Pods-EchartsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +231,12 @@
 				93324D9D1F13866C005DDC26 /* EDHomeViewController.h */,
 				93324D9E1F13866C005DDC26 /* EDHomeViewController.m */,
 				93324D9F1F13866C005DDC26 /* EDHomeViewController.storyboard */,
+				938868891F146BAE009158B5 /* EDPolylineViewController.h */,
+				9388688A1F146BAE009158B5 /* EDPolylineViewController.m */,
+				9388688B1F146BAE009158B5 /* EDPolylineViewController.storyboard */,
+				9388688E1F146DC0009158B5 /* EDColumnarViewController.h */,
+				9388688F1F146DC0009158B5 /* EDColumnarViewController.m */,
+				938868901F146DC0009158B5 /* EDColumnarViewController.storyboard */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -450,6 +466,8 @@
 			files = (
 				93324D361F1385A0005DDC26 /* Podfile in Resources */,
 				93324DA11F13866C005DDC26 /* EDHomeViewController.storyboard in Resources */,
+				938868921F146DC0009158B5 /* EDColumnarViewController.storyboard in Resources */,
+				9388688D1F146BAE009158B5 /* EDPolylineViewController.storyboard in Resources */,
 				93324D5C1F1385A0005DDC26 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +539,7 @@
 				93324D341F1385A0005DDC26 /* main.m in Sources */,
 				93324D971F1385E8005DDC26 /* ArrayUtils.m in Sources */,
 				93324D931F1385E8005DDC26 /* UIView+Create.m in Sources */,
+				9388688C1F146BAE009158B5 /* EDPolylineViewController.m in Sources */,
 				93324D951F1385E8005DDC26 /* UIView+Utils.m in Sources */,
 				93324D8C1F1385E8005DDC26 /* NSObject+AutoDescription.m in Sources */,
 				93324D961F1385E8005DDC26 /* UIViewController+Create.m in Sources */,
@@ -530,6 +549,7 @@
 				93324D4C1F1385A0005DDC26 /* GGUtil.m in Sources */,
 				93324D921F1385E8005DDC26 /* UITableViewCell+Utils.m in Sources */,
 				93324D4F1F1385A0005DDC26 /* UIViewController+NavItem.m in Sources */,
+				938868911F146DC0009158B5 /* EDColumnarViewController.m in Sources */,
 				93324D9A1F1385E8005DDC26 /* GGImagePickerHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
