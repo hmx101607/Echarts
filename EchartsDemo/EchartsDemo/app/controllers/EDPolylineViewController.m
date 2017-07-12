@@ -63,6 +63,7 @@ UIScrollViewDelegate
     lineModel2.symbol = PYSymbolCircle;
     lineModel2.lineWith = @"1.5";
     lineModel2.points = [dataSource2 copy];
+    lineModel2.seriesType = PYSeriesTypeLine;
     self.polylineView.dataSource = @[lineModel2];
     [self.polylineView refreshData];
 }
