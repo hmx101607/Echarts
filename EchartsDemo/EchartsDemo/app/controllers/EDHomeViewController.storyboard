@@ -22,24 +22,42 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ap-hY-3TZ">
-                                <rect key="frame" x="164" y="218.5" width="46" height="30"/>
-                                <state key="normal" title="折线图"/>
+                                <rect key="frame" x="137.5" y="218.5" width="99" height="30"/>
+                                <state key="normal" title="Echarts折线图"/>
                                 <connections>
                                     <action selector="polylineAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="LnV-4s-3Qt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-FL-hA5">
-                                <rect key="frame" x="164" y="348.5" width="46" height="30"/>
-                                <state key="normal" title="柱状图"/>
+                                <rect key="frame" x="137.5" y="298.5" width="99" height="30"/>
+                                <state key="normal" title="Echarts柱状图"/>
                                 <connections>
                                     <action selector="columnarAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="MGO-RY-czl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-e3-prw">
+                                <rect key="frame" x="141" y="378.5" width="92" height="30"/>
+                                <state key="normal" title="Charts折线图"/>
+                                <connections>
+                                    <action selector="chartsPolylineAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="V0f-VO-H7g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrI-oC-UkO">
+                                <rect key="frame" x="141" y="459" width="92" height="30"/>
+                                <state key="normal" title="Charts柱状图"/>
+                                <connections>
+                                    <action selector="chartsColumnarAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="tkP-3P-f6i"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LrI-oC-UkO" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="437-6R-qaC"/>
                             <constraint firstItem="5Ap-hY-3TZ" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="BoC-ZE-tp6"/>
-                            <constraint firstItem="FBx-FL-hA5" firstAttribute="top" secondItem="5Ap-hY-3TZ" secondAttribute="bottom" constant="100" id="ITf-JB-beR"/>
+                            <constraint firstItem="LrI-oC-UkO" firstAttribute="top" secondItem="ayb-e3-prw" secondAttribute="bottom" constant="50" id="D2S-Ew-Vco"/>
+                            <constraint firstItem="FBx-FL-hA5" firstAttribute="top" secondItem="5Ap-hY-3TZ" secondAttribute="bottom" constant="50" id="ITf-JB-beR"/>
+                            <constraint firstItem="ayb-e3-prw" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="N4R-XV-pNd"/>
+                            <constraint firstItem="ayb-e3-prw" firstAttribute="top" secondItem="FBx-FL-hA5" secondAttribute="bottom" constant="50" id="OIj-sl-Tsx"/>
                             <constraint firstItem="5Ap-hY-3TZ" firstAttribute="centerY" secondItem="cOb-So-n25" secondAttribute="centerY" constant="-100" id="jKs-EQ-iEY"/>
                             <constraint firstItem="FBx-FL-hA5" firstAttribute="centerX" secondItem="cOb-So-n25" secondAttribute="centerX" id="wx6-Yu-4cZ"/>
                         </constraints>

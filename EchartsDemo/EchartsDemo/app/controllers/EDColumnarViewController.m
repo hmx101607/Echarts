@@ -77,7 +77,7 @@ UIScrollViewDelegate
     series.barWidth = @(5.f);
     PYTooltip *toolTip = [[PYTooltip alloc] init];
     toolTip.borderRadius = @(5.f);
-    series.data = [@[@2.0, @4.9, @7.0, @23.2, @25.6, @76.7, @135.6, @162.2, @32.6, @20.0, @6.4, @3.3] mutableCopy];
+    series.data = [@[@2.0, @4.9, @"-", @23.2, @25.6, @76.7, @135.6, @162.2, @32.6, @20.0, @6.4, @3.3] mutableCopy];
     [option setSeries:[@[series] mutableCopy]];
 
     /** 初始化图表 */

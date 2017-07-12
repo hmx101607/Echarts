@@ -14,15 +14,27 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - ChartsRealm (3.0.2):
+    - Charts (~> 3.0.2)
+    - RealmSwift (~> 2.4)
   - FBRetainCycleDetector (0.1.3)
   - FLEX (2.4.0)
   - INTULocationManager (4.2.0)
   - iOS-Echarts (1.4.4)
+  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MLeaksFinder (0.2.1):
     - FBRetainCycleDetector
   - NYXImagesKit (2.3)
   - PureLayout (3.0.2)
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -33,9 +45,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Charts
+  - ChartsRealm
   - FLEX
   - INTULocationManager
   - iOS-Echarts
+  - Masonry
   - MBProgressHUD
   - MLeaksFinder
   - NYXImagesKit
@@ -46,18 +61,23 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  ChartsRealm: ed0332fd409298188a2b71e9548604165c987d42
   FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   iOS-Echarts: dbc7423d861e5eedee78906a39d205b5c4da9a13
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   uicontrol-blocks: 426f75a0bceef694415f2914eec07619adc9db02
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: cda9f59807ece9da539fbe4995126bfe4d941b75
+PODFILE CHECKSUM: e0e5549c56bf2a2605a68b7aab028bf17d816eaf
 
 COCOAPODS: 1.2.0

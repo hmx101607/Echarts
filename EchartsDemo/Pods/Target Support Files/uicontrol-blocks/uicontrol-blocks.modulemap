@@ -1,0 +1,6 @@
+framework module uicontrol_blocks {
+  umbrella header "uicontrol-blocks-umbrella.h"
+
+  export *
+  module * { export * }
+}

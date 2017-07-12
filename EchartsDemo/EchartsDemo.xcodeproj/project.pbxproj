@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58165F40F3C7C20DA6A3E41C /* libPods-EchartsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F945853355BA6553E146E8 /* libPods-EchartsDemo.a */; };
+		3C876A0A618A681DB96269A5 /* Pods_EchartsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093CB52D2167FAAB20B00793 /* Pods_EchartsDemo.framework */; };
 		93324D341F1385A0005DDC26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93324D331F1385A0005DDC26 /* main.m */; };
 		93324D361F1385A0005DDC26 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 93324D351F1385A0005DDC26 /* Podfile */; };
 		93324D4C1F1385A0005DDC26 /* GGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 93324D4B1F1385A0005DDC26 /* GGUtil.m */; };
@@ -38,11 +38,15 @@
 		9388688D1F146BAE009158B5 /* EDPolylineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9388688B1F146BAE009158B5 /* EDPolylineViewController.storyboard */; };
 		938868911F146DC0009158B5 /* EDColumnarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388688F1F146DC0009158B5 /* EDColumnarViewController.m */; };
 		938868921F146DC0009158B5 /* EDColumnarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938868901F146DC0009158B5 /* EDColumnarViewController.storyboard */; };
+		938868961F14AD47009158B5 /* EDChartsPolylineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868941F14AD47009158B5 /* EDChartsPolylineViewController.m */; };
+		938868971F14AD47009158B5 /* EDChartsPolylineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938868951F14AD47009158B5 /* EDChartsPolylineViewController.storyboard */; };
+		938868A41F14B19B009158B5 /* EchartsDemo-Bridging-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938868A31F14B19B009158B5 /* EchartsDemo-Bridging-Header.swift */; };
+		938868A81F14C1F2009158B5 /* EDPolylineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868A71F14C1F2009158B5 /* EDPolylineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		037C071F3B520625BF89671D /* Pods-EchartsDemo.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchartsDemo.app store.xcconfig"; path = "Pods/Target Support Files/Pods-EchartsDemo/Pods-EchartsDemo.app store.xcconfig"; sourceTree = "<group>"; };
-		19F945853355BA6553E146E8 /* libPods-EchartsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EchartsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		093CB52D2167FAAB20B00793 /* Pods_EchartsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EchartsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93324D2D1F1385A0005DDC26 /* EchartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93324D311F1385A0005DDC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93324D321F1385A0005DDC26 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 		9388688E1F146DC0009158B5 /* EDColumnarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDColumnarViewController.h; sourceTree = "<group>"; };
 		9388688F1F146DC0009158B5 /* EDColumnarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDColumnarViewController.m; sourceTree = "<group>"; };
 		938868901F146DC0009158B5 /* EDColumnarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EDColumnarViewController.storyboard; sourceTree = "<group>"; };
+		938868931F14AD47009158B5 /* EDChartsPolylineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDChartsPolylineViewController.h; sourceTree = "<group>"; };
+		938868941F14AD47009158B5 /* EDChartsPolylineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDChartsPolylineViewController.m; sourceTree = "<group>"; };
+		938868951F14AD47009158B5 /* EDChartsPolylineViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EDChartsPolylineViewController.storyboard; sourceTree = "<group>"; };
+		9388689B1F14B045009158B5 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9388689F1F14B070009158B5 /* ChartsRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChartsRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		938868A21F14B19A009158B5 /* EchartsDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EchartsDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		938868A31F14B19B009158B5 /* EchartsDemo-Bridging-Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EchartsDemo-Bridging-Header.swift"; sourceTree = "<group>"; };
+		938868A61F14C1F2009158B5 /* EDPolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDPolylineView.h; sourceTree = "<group>"; };
+		938868A71F14C1F2009158B5 /* EDPolylineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDPolylineView.m; sourceTree = "<group>"; };
 		A24A33962186BB33AE7BA686 /* Pods-EchartsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchartsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EchartsDemo/Pods-EchartsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A8049166168FC6DE2B3221F2 /* Pods-EchartsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchartsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchartsDemo/Pods-EchartsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93324D5A1F1385A0005DDC26 /* libsqlite3.dylib in Frameworks */,
-				58165F40F3C7C20DA6A3E41C /* libPods-EchartsDemo.a in Frameworks */,
+				3C876A0A618A681DB96269A5 /* Pods_EchartsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +194,8 @@
 				93324D3F1F1385A0005DDC26 /* Entitlements.entitlements */,
 				93324D511F1385A0005DDC26 /* AppDelegate.h */,
 				93324D521F1385A0005DDC26 /* AppDelegate.m */,
+				938868A31F14B19B009158B5 /* EchartsDemo-Bridging-Header.swift */,
+				938868A21F14B19A009158B5 /* EchartsDemo-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,6 +252,9 @@
 				9388688E1F146DC0009158B5 /* EDColumnarViewController.h */,
 				9388688F1F146DC0009158B5 /* EDColumnarViewController.m */,
 				938868901F146DC0009158B5 /* EDColumnarViewController.storyboard */,
+				938868931F14AD47009158B5 /* EDChartsPolylineViewController.h */,
+				938868941F14AD47009158B5 /* EDChartsPolylineViewController.m */,
+				938868951F14AD47009158B5 /* EDChartsPolylineViewController.storyboard */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -258,8 +276,10 @@
 		93324D451F1385A0005DDC26 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				938868A61F14C1F2009158B5 /* EDPolylineView.h */,
+				938868A71F14C1F2009158B5 /* EDPolylineView.m */,
 			);
-			name = views;
+			path = views;
 			sourceTree = "<group>";
 		};
 		93324D461F1385A0005DDC26 /* config */ = {
@@ -399,7 +419,9 @@
 		EE0B87E6840B05E8C947E763 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19F945853355BA6553E146E8 /* libPods-EchartsDemo.a */,
+				9388689F1F14B070009158B5 /* ChartsRealm.framework */,
+				9388689B1F14B045009158B5 /* Charts.framework */,
+				093CB52D2167FAAB20B00793 /* Pods_EchartsDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -438,6 +460,7 @@
 				TargetAttributes = {
 					93324D2C1F1385A0005DDC26 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -467,6 +490,7 @@
 				93324D361F1385A0005DDC26 /* Podfile in Resources */,
 				93324DA11F13866C005DDC26 /* EDHomeViewController.storyboard in Resources */,
 				938868921F146DC0009158B5 /* EDColumnarViewController.storyboard in Resources */,
+				938868971F14AD47009158B5 /* EDChartsPolylineViewController.storyboard in Resources */,
 				9388688D1F146BAE009158B5 /* EDPolylineViewController.storyboard in Resources */,
 				93324D5C1F1385A0005DDC26 /* images.xcassets in Resources */,
 			);
@@ -533,15 +557,18 @@
 				93324D8D1F1385E8005DDC26 /* UIActionSheet+Blocks.m in Sources */,
 				93324D8F1F1385E8005DDC26 /* UIButton+ActivityIndicatorView.m in Sources */,
 				93324D9C1F1385E8005DDC26 /* PortraitNavigationController.m in Sources */,
+				938868961F14AD47009158B5 /* EDChartsPolylineViewController.m in Sources */,
 				93324D981F1385E8005DDC26 /* AutorotateNavigationController.m in Sources */,
 				93324D901F1385E8005DDC26 /* UILabel+FormattedText.m in Sources */,
 				93324D911F1385E8005DDC26 /* UIStoryboard+Addition.m in Sources */,
 				93324D341F1385A0005DDC26 /* main.m in Sources */,
+				938868A81F14C1F2009158B5 /* EDPolylineView.m in Sources */,
 				93324D971F1385E8005DDC26 /* ArrayUtils.m in Sources */,
 				93324D931F1385E8005DDC26 /* UIView+Create.m in Sources */,
 				9388688C1F146BAE009158B5 /* EDPolylineViewController.m in Sources */,
 				93324D951F1385E8005DDC26 /* UIView+Utils.m in Sources */,
 				93324D8C1F1385E8005DDC26 /* NSObject+AutoDescription.m in Sources */,
+				938868A41F14B19B009158B5 /* EchartsDemo-Bridging-Header.swift in Sources */,
 				93324D961F1385E8005DDC26 /* UIViewController+Create.m in Sources */,
 				93324D991F1385E8005DDC26 /* GGDatePickerHelper.m in Sources */,
 				93324DA01F13866C005DDC26 /* EDHomeViewController.m in Sources */,
@@ -682,14 +709,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 037C071F3B520625BF89671D /* Pods-EchartsDemo.app store.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EchartsDemo/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "EchartsDemo/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.echarts.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EchartsDemo/Supporting Files/EchartsDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = "App Store";
 		};
@@ -697,14 +729,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A24A33962186BB33AE7BA686 /* Pods-EchartsDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EchartsDemo/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "EchartsDemo/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.echarts.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EchartsDemo/Supporting Files/EchartsDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -712,14 +750,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8049166168FC6DE2B3221F2 /* Pods-EchartsDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EchartsDemo/Supporting Files/Prefix.pch";
 				INFOPLIST_FILE = "EchartsDemo/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.echarts.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "EchartsDemo/Supporting Files/EchartsDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

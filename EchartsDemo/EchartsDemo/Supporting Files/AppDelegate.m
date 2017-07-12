@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <FLEXManager.h>
-#import <AFNetworkReachabilityManager.h>
+#import "FLEXManager.h"
+#import "AFNetworkReachabilityManager.h"
 #import "EDHomeViewController.h"
 
 @interface AppDelegate()

@@ -1,0 +1,6 @@
+framework module Pods_EchartsDemo {
+  umbrella header "Pods-EchartsDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

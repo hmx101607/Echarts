@@ -9,6 +9,7 @@
 #import "EDHomeViewController.h"
 #import "EDPolylineViewController.h"
 #import "EDColumnarViewController.h"
+#import "EDChartsPolylineViewController.h"
 
 @interface EDHomeViewController ()
 
@@ -33,6 +34,16 @@
     EDColumnarViewController *columnarVC = [EDColumnarViewController create];
     columnarVC.title = @"柱状图";
     [self.navigationController pushViewController:columnarVC animated:YES];
+}
+
+- (IBAction)chartsPolylineAction:(UIButton *)sender {
+    EDChartsPolylineViewController *chartsPolylineVC = [EDChartsPolylineViewController create];
+    
+    [self.navigationController pushViewController:chartsPolylineVC animated:YES];
+}
+
+- (IBAction)chartsColumnarAction:(UIButton *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning
