@@ -45,7 +45,7 @@ UIScrollViewDelegate
     lineModel2.points = [dataSource2 copy];
     
     NSArray *xAxisMenuArray = @[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"];
-    EDPolylineView *polylineView = [[EDPolylineView alloc] initWithDataSource:@[lineModel1] xAxisMenuArray:xAxisMenuArray lineColorArray:nil splitNumber:nil yAxisMax:nil yAxisMin:nil];
+    EDPolylineView *polylineView = [[EDPolylineView alloc] initWithDataSource:@[lineModel1] xAxisMenuArray:xAxisMenuArray lineColorArray:nil splitNumber:nil yAxisMax:nil yAxisMin:nil showTooltip:YES];
 //    EDPolylineView *polylineView = [[EDPolylineView alloc] init];
 //    polylineView.splitNumber = @(6);
 //    polylineView.yAxisMax = @(18);

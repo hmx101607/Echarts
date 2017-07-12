@@ -24,7 +24,7 @@
 
 @implementation EDPolylineView
 
-- (instancetype)initWithDataSource:(NSArray *)dataSource xAxisMenuArray:(NSArray *)xAxisMenuArray lineColorArray:(NSArray *_Nullable)lineColorArray splitNumber:(NSNumber * _Nullable)splitNumber yAxisMax:(NSNumber * _Nullable)yAxisMax yAxisMin:(NSNumber * _Nullable)yAxisMin{
+- (instancetype)initWithDataSource:(NSArray *)dataSource xAxisMenuArray:(NSArray *)xAxisMenuArray lineColorArray:(NSArray *_Nullable)lineColorArray splitNumber:(NSNumber * _Nullable)splitNumber yAxisMax:(NSNumber * _Nullable)yAxisMax yAxisMin:(NSNumber * _Nullable)yAxisMin showTooltip:(BOOL)showTooltip{
     if (self = [super init]) {
         self.scrollView.backgroundColor = [UIColor whiteColor];
         self.xAxisMenuArray = xAxisMenuArray;
@@ -32,6 +32,7 @@
         self.splitNumber = splitNumber;
         self.yAxisMax = yAxisMax;
         self.yAxisMin = yAxisMin;
+        self.showTooltip = showTooltip;
         [self showLine];
     }
     return self;

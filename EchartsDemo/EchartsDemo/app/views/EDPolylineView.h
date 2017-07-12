@@ -33,7 +33,7 @@
  初始化
  如果不是使用该方法进行初始化，必须主动调用refreshData()方法
  */
-- (instancetype _Nullable )initWithDataSource:(NSArray *_Nonnull)dataSource xAxisMenuArray:(NSArray *_Nonnull)xAxisMenuArray lineColorArray:(NSArray *_Nullable)lineColorArray splitNumber:(NSNumber *_Nullable)splitNumber yAxisMax:(NSNumber *_Nullable)yAxisMax yAxisMin:(NSNumber *_Nullable)yAxisMin;
+- (instancetype _Nullable )initWithDataSource:(NSArray *_Nonnull)dataSource xAxisMenuArray:(NSArray *_Nonnull)xAxisMenuArray lineColorArray:(NSArray *_Nullable)lineColorArray splitNumber:(NSNumber *_Nullable)splitNumber yAxisMax:(NSNumber *_Nullable)yAxisMax yAxisMin:(NSNumber *_Nullable)yAxisMin showTooltip:(BOOL)showTooltip;
 
 /** 折线颜色:每一条折线对应相应的数据 : 16进制 默认：@"#20BCFC" : @"#ff6347" */
 @property (strong, nonatomic, nullable) NSArray *lineColorArray;
