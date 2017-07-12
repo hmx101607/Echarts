@@ -34,7 +34,7 @@ UIScrollViewDelegate
     lineModel1.symbol = PYSymbolCircle;
     lineModel1.lineWith = @"1.5";
     lineModel1.points = [dataSource1 copy];
-    lineModel1.fillBockgroundColor = YES;
+    lineModel1.seriesType = PYSeriesTypeBar;
     
     NSArray *dataSource2 = @[@"6", @"9", @"11", @"10", @"1", @"18", @"10", @"12", @"6", @"16", @"15", @"10"];
     EDPolylineModel *lineModel2 = [[EDPolylineModel alloc] init];
@@ -43,18 +43,13 @@ UIScrollViewDelegate
     lineModel2.symbol = PYSymbolCircle;
     lineModel2.lineWith = @"1.5";
     lineModel2.points = [dataSource2 copy];
+    lineModel2.seriesType = PYSeriesTypeLine;
+    lineModel2.fillBockgroundColor = NO;
     
     NSArray *xAxisMenuArray = @[@"1月", @"2月", @"3月", @"4月", @"5月", @"6月", @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"];
-    EDPolylineView *polylineView = [[EDPolylineView alloc] initWithDataSource:@[lineModel1] xAxisMenuArray:xAxisMenuArray lineColorArray:nil splitNumber:nil yAxisMax:nil yAxisMin:nil showTooltip:YES];
-//    EDPolylineView *polylineView = [[EDPolylineView alloc] init];
-//    polylineView.splitNumber = @(6);
-//    polylineView.yAxisMax = @(18);
-//    polylineView.yAxisMin = @(0);
-//    polylineView.dataSource = @[lineModel1];
-//    polylineView.xAxisMenuArray = xAxisMenuArray;
+    EDPolylineView *polylineView = [[EDPolylineView alloc] initWithDataSource:@[lineModel1, lineModel2] xAxisMenuArray:xAxisMenuArray lineColorArray:nil splitNumber:nil yAxisMax:nil yAxisMin:nil boundaryGap:YES showTooltip:YES];
     polylineView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 300.f);
     [polylineView refreshData];
-
     [self.view addSubview:polylineView];
     self.polylineView = polylineView;
 }

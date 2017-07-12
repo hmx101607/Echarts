@@ -24,7 +24,7 @@
 
 @implementation EDPolylineView
 
-- (instancetype)initWithDataSource:(NSArray *)dataSource xAxisMenuArray:(NSArray *)xAxisMenuArray lineColorArray:(NSArray *_Nullable)lineColorArray splitNumber:(NSNumber * _Nullable)splitNumber yAxisMax:(NSNumber * _Nullable)yAxisMax yAxisMin:(NSNumber * _Nullable)yAxisMin showTooltip:(BOOL)showTooltip{
+- (instancetype)initWithDataSource:(NSArray *)dataSource xAxisMenuArray:(NSArray *)xAxisMenuArray lineColorArray:(NSArray *_Nullable)lineColorArray splitNumber:(NSNumber * _Nullable)splitNumber yAxisMax:(NSNumber * _Nullable)yAxisMax yAxisMin:(NSNumber * _Nullable)yAxisMin boundaryGap:(BOOL)boundaryGap showTooltip:(BOOL)showTooltip{
     if (self = [super init]) {
         self.scrollView.backgroundColor = [UIColor whiteColor];
         self.xAxisMenuArray = xAxisMenuArray;
@@ -32,6 +32,7 @@
         self.splitNumber = splitNumber;
         self.yAxisMax = yAxisMax;
         self.yAxisMin = yAxisMin;
+        self.boundaryGap = boundaryGap;
         self.showTooltip = showTooltip;
         [self showLine];
     }
@@ -85,7 +86,7 @@
         /** 提示框 */
         PYTooltip *tooltip = [[PYTooltip alloc] init];
         // 触发类型 默认数据触发
-        tooltip.trigger = @"axis";
+        tooltip.trigger = PYTooltipTriggerItem;
         // 竖线宽度
         tooltip.axisPointer.lineStyle.width = @1;
         // 提示框 文字样式设置
@@ -105,8 +106,8 @@
     /** 直角坐标系内绘图网格, 说明见下图 */
     PYGrid *grid = [[PYGrid alloc] init];
     // 左上角位置
-    grid.x = @(100);
-    grid.y = @(80);
+    grid.x = @(45);
+    grid.y = @(20);
     // 右下角位置
     grid.x2 = @(20);
     grid.y2 = @(30);
@@ -119,7 +120,7 @@
     //横轴默认为类目型(就是坐标自己设置)
     xAxis.type = PYAxisTypeCategory;
     // 起始和结束两端空白:设置YES，则两边会产生空白，设置NO,则X轴从0坐标开始
-    xAxis.boundaryGap = @(NO);
+    xAxis.boundaryGap = @(self.boundaryGap);
     // 分隔线:垂直分割线
     xAxis.splitLine.show = NO;
     // 坐标轴线:一条紧挨坐标轴的蓝色线
@@ -143,7 +144,7 @@
     // 分割线类型
     // yAxis.splitLine.lineStyle.type = @"dashed";   //'solid' | 'dotted' | 'dashed' 虚线类型
     //单位设置,  设置最大值, 最小值
-    //yAxis.axisLabel.formatter = @"{value} k";
+//    yAxis.axisLabel.formatter = @"{value} k";
     // Y轴坐标数据
     // 分割段数，默认为5
     yAxis.splitNumber = self.splitNumber;
@@ -161,26 +162,31 @@
         PYCartesianSeries *series = [[PYCartesianSeries alloc] init];
         series.name = lineModel.seriesName;
         // 类型为折线
-        series.type = @"line";
-        // 坐标点大小
-        series.symbolSize = [GGUtil stringIsEmpty:lineModel.symbolSize]?@(1.5):[lineModel.symbolSize numberValue];
-        // 坐标点样式, 设置连线的宽度
-        series.itemStyle = [[PYItemStyle alloc] init];
-        series.itemStyle.normal = [[PYItemStyleProp alloc] init];
-        series.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
-        series.itemStyle.normal.lineStyle.width = [GGUtil stringIsEmpty:lineModel.lineWith]?@(1.5):[lineModel.lineWith numberValue];
+        series.type = lineModel.seriesType;
         // 添加坐标点 y 轴数据 ( 如果某一点 无数据, 可以传 @"-" 断开连线 如 : @[@"7566", @"-", @"7571"]  )
         series.data = lineModel.points;
         
-        //填充背景色
-        if (lineModel.isFillBockgroundColor) {
-            PYAreaStyle *areaStyle = [[PYAreaStyle alloc] init];
-            areaStyle.type = PYAreaStyleTypeDefault;
-            PYItemStyleProp *itemStyleProp = [[PYItemStyleProp alloc] init];
-            itemStyleProp.areaStyle = areaStyle;
-            PYItemStyle *itemStyle = [[PYItemStyle alloc] init];
-            itemStyle.normal = itemStyleProp;
-            series.itemStyle = itemStyle;
+        if ([lineModel.seriesType isEqualToString:PYSeriesTypeLine]) {
+            // 坐标点大小
+            series.symbolSize = [GGUtil stringIsEmpty:lineModel.symbolSize]?@(1.5):[lineModel.symbolSize numberValue];
+            // 坐标点样式, 设置连线的宽度
+            series.itemStyle = [[PYItemStyle alloc] init];
+            series.itemStyle.normal = [[PYItemStyleProp alloc] init];
+            series.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
+            series.itemStyle.normal.lineStyle.width = [GGUtil stringIsEmpty:lineModel.lineWith]?@(1.5):[lineModel.lineWith numberValue];
+            
+            //填充背景色
+            if (lineModel.isFillBockgroundColor) {
+                PYAreaStyle *areaStyle = [[PYAreaStyle alloc] init];
+                areaStyle.type = PYAreaStyleTypeDefault;
+                PYItemStyleProp *itemStyleProp = [[PYItemStyleProp alloc] init];
+                itemStyleProp.areaStyle = areaStyle;
+                PYItemStyle *itemStyle = [[PYItemStyle alloc] init];
+                itemStyle.normal = itemStyleProp;
+                series.itemStyle = itemStyle;
+            }
+        } else if ([lineModel.seriesType isEqualToString:PYSeriesTypeBar]){
+            series.barWidth = lineModel.barWidth;
         }
         [seriesArray addObject:series];
     }
@@ -198,8 +204,9 @@
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.width , self.height)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.width * 2, self.height)];
         _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.contentSize = CGSizeMake(self.width * 2, self.height);
         [self addSubview:_scrollView];
     }
     return _scrollView;
